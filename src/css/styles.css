@@ -3,6 +3,11 @@
     src: url(../fonts/Oswald-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
 :root{
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-family: 'Slikscreen';
@@ -18,8 +23,19 @@ body{
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    background: rgb(156,164,219);
-    background: linear-gradient(45deg, rgb(212, 215, 235) 0%, rgba(0,62,158,1) 0%, rgb(149, 191, 199) 100%);
+    background-image: url(../imgs/new_file.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #header {
@@ -38,7 +54,7 @@ body{
 }
 
 .logo-container img{
-    width: 85px;
+    width: 70px;
 }
 
 #header .header-tabs-container{
@@ -161,10 +177,10 @@ body{
     width: 210px;
     height: 60px;
     border: none;
-    border: 4px solid rgb(0, 80, 185);
-    background: white;
+    border: 4px solid rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.096);
     border-radius: 8px;
-    color: rgb(0, 80, 185);
+    color: rgb(255, 255, 255);
     font-size: 1.8rem;
     display: flex;
     align-items: center;
@@ -172,8 +188,21 @@ body{
     gap: 10px;
     transition: 0.09s;
     font-weight: 700;
-    box-shadow: 0px 8px 20px 0 rgba(255, 255, 255, 0.534), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0px 8px 20px 0 rgba(255, 255, 255, 0.534);
 }
+
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
 
 .btn-container button:hover {
     transform: scale(1.03);
@@ -202,4 +231,83 @@ body{
     text-align: center;
     animation: appear 1s;
 }
+
+#header.courses{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#header.courses h1 {
+    border-bottom: 4px solid white;
+}
+
+#content-container.courses{
+    color: white;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    font-family: 'OpenSans';
+}
+
+.courses-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course{
+    background-image: url(../imgs/background2.svg);
+    width: 80%;
+    border-radius: 30px;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: none;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.534);
+    transition: 0.2s;
+}
+
+.course:hover{
+    transform: scale(1.02);
+    box-shadow: -5px 10px 35px rgba(0, 0, 0, 0.39);
+}
+
+.course h1 {
+    font-size: 2rem;
+    font-family: 'Oswald';
+    border-bottom: 3px solid white;
+    margin-top: 0px;
+}
+
+.course h2 {
+    color: white;
+}
+
+.course img{
+    width: 80px;
+}
+
+.open {
+    margin-top: 10px;
+    padding: 10px;
+    height: 40px;
+    border: 4px solid white;
+    background: transparent;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
