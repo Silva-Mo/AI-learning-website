@@ -1,5 +1,3 @@
-/* @import './node_modules/sal.js/dist/sal.css' */
-
 @font-face {
     font-family: 'Oswald';
     src: url(../fonts/Oswald-VariableFont_wght.ttf);
@@ -40,7 +38,7 @@ body{
 }
 
 .logo-container img{
-    width: 70px;
+    width: 85px;
 }
 
 #header .header-tabs-container{
@@ -81,7 +79,7 @@ body{
     background: rgb(0,32,255);
     background: linear-gradient(124deg, rgb(204, 239, 248) 0%, rgb(211, 238, 255) 0%, rgb(220, 220, 255) 100%);
     border-radius: 30px;
-    gap: 100px
+    gap: 160px
 }
 
 .content{
@@ -91,11 +89,19 @@ body{
 }
 
 .content .section{
+    opacity: 0;
+    transform: translateX(-100px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    transition: all 1.2s;
+}
+
+.content .show {
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 .content .section h1, .content .section h2{
@@ -129,15 +135,14 @@ body{
 .content .five{
     flex-direction: row;
     text-align: start;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .content .five h2{
     font-size: 1.6rem;
     margin: 10px;
-    background: -webkit-linear-gradient(#3e476e, #1c008b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: rgb(95, 0, 158);
 }
 
 .content .five img {
@@ -156,27 +161,32 @@ body{
     width: 210px;
     height: 60px;
     border: none;
-    border: 4px solid white;
-    background: transparent;
+    border: 4px solid rgb(0, 80, 185);
+    background: white;
     border-radius: 8px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 80, 185);
     font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    transition: 0.1s;
+    transition: 0.09s;
     font-weight: 700;
+    box-shadow: 0px 8px 20px 0 rgba(255, 255, 255, 0.534), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
 .btn-container button:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* @keyframes apear{
-    from {
+.btn-container button:active{
+    transform: scale(1);
+}
+
+@keyframes appear {
+    from{
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-100px);
     }
     to{
         opacity: 1;
@@ -184,12 +194,12 @@ body{
     }
 }
 
-.section {
-    animation: apear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+.content .one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    animation: appear 1s;
 }
 
-.one{
-    animation: apear 0.6s linear;
-} */
