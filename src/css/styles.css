@@ -325,7 +325,15 @@ a:link {
     :root{
         font-size: 12px;
     }
+
+    #header.courses{
+        padding: 5px;
+    }
     
+    .course{
+        margin-bottom: 20px;
+    }
+
    .content .section img {
         width: 250px;
    }
