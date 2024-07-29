@@ -365,6 +365,10 @@ a:link {
         height: 170px;
     }
 
+    #header.courses{
+        height: 100px;
+    }
+
     #content-container .content{
         margin-top: 5px;
     }
